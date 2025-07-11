@@ -4,8 +4,8 @@ public class PersonagemGame {
 
     public void tomarDano(int quantidadeDeDano){
         int saudeMinima = 0;
-        if(quantidadeDeDano >= saudeMinima){
-            this.saudeAtual = 0;
+        if(quantidadeDeDano >= this.saudeAtual){
+            this.saudeAtual = saudeMinima;
         }else{
             this.saudeAtual -= quantidadeDeDano;
         }     
