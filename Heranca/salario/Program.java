@@ -21,7 +21,7 @@ public class Program {
         System.out.printf(new Locale("pt","BR"),"Salario Fixo: %.2f - Salario Total: %.2f - Valor Bonus: %.2f\n",
                 empregadoEngenharia2.getSalarioFixo(),
                 empregadoEngenharia2.calcularSalarioTotal(departamentoEngenharia),
-                empregadoEngenharia2.calcularBonus(departamentoEngenharia));
+                empregadoEngenharia2.calcularBonus(departamentoEngenharia ));
 
         System.out.printf(new Locale("pt","BR"),"Salario Fixo: %.2f - Salario Total: %.2f - Valor Bonus: %.2f\n",
                 gerenteEngenharia.getSalarioFixo(),
