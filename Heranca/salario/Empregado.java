@@ -10,7 +10,7 @@ public class Empregado {
     }
 
     public double calcularBonus(Departamento departamento) {
-        if (departamento.atingiuMeta()) {
+        if (departamento.alcancouMeta()) {
             return salarioFixo * 0.1; // 10% bonus if the department met its goal
         }
         return 0; // no bonus if the goal was not met
