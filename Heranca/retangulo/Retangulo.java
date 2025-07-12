@@ -34,7 +34,14 @@ public class Retangulo extends FormaGeometrica {
         }
     }
 
+    @Override
+    public double area(){
+        return largura * altura;
+    }
 
-
+    @Override
+    public String toString() {
+        return super.toString().format(" %.2f, /  %.2f", largura, altura);
+    }
     
 }
