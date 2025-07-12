@@ -7,7 +7,7 @@
 
             System.out.println("meuAnimal eh um " + meuAnimal.getClass().getName());
             System.out.println("meuCachorro eh um " + meuCachorro.getClass().getName());
-            System.out.println("objeto eh um " + obj.getClass().getName());
+            System.out.println("obj eh um " + obj.getClass().getName());
             System.out.println("umOutroAnimal eh um " + umOutroAnimal.getClass().getName());
         }
     }
