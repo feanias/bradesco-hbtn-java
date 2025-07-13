@@ -35,7 +35,7 @@ public class Pedido {
     public void apresentarResumoPedido() {
         double valorDesconto = 0.0;
         double total = 0.0;
-        System.out.println("------- RESUMO PEDIDO -------");
+        System.out.println("------- RESUMO PEDIDO ------");
         for (ItemPedido item : itens) {
             System.out.printf("Tipo: %s  Titulo: %s  Preco: %.2f  Quant: %d  Total: %.2f\n",
                     item.getProduto().getClass().getSimpleName(),
@@ -53,7 +53,7 @@ public class Pedido {
         System.out.printf("TOTAL PRODUTOS: %.2f\n", total);
         System.out.println("----------------------------");
         System.out.printf(  "TOTAL PEDIDO: %.2f\n", calcularTotalComDesconto());
-        System.out.println("---------------------------- ");
+        System.out.println("----------------------------");
     }
         
 }
