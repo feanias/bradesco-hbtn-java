@@ -28,11 +28,4 @@ public class ItemPedido {
         return produto.obterPrecoLiquido();
     }
     
-    public double calcularTotal() {
-        return quantidade * produto.obterPrecoLiquido();
-    }
-
-    public double calcularTotalDesconto(double percentualDesconto) {
-        return calcularTotal() * (percentualDesconto / 100);
-    }
 }
