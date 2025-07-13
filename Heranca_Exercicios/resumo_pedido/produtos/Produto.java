@@ -14,4 +14,14 @@ public abstract class Produto {
         this.pais = pais;
         this.precoBruto = precoBruto;
     }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public double getPrecoBruto() {
+        return precoBruto;
+    }    
+
+    
 }
