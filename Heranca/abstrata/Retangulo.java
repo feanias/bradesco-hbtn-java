@@ -1,7 +1,4 @@
-
 import java.text.DecimalFormat;
-
-
 
 public class Retangulo extends FormaGeometrica {
     protected double largura;

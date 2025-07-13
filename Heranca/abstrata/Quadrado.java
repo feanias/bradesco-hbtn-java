@@ -3,6 +3,12 @@ import java.text.DecimalFormat;
 public class Quadrado extends Retangulo {
     private double lado;
 
+
+    @Override    
+    public double area() {
+        return lado * lado;
+    }
+    
     public double getLado() {
         return lado;
     }
