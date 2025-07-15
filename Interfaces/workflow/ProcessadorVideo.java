@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class ProcessadorVideo {
 
-    ArrayList<Object> canais = new ArrayList<>();
+    ArrayList<CanalNotificacao> canais = new ArrayList<>();
 
     public void registrarCanal(CanalNotificacao canal) {
         canais.add(canal);
