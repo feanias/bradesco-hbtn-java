@@ -1,9 +1,9 @@
 public class Pedido {
 
-    int codigo;
-    double peso;
-    double total;
-    Frete frete;
+    private int codigo;
+    private double peso;
+    private double total;
+    private Frete frete;
 
     public Pedido(int codigo, double peso, double total) {
         this.codigo = codigo;
