@@ -1,3 +1,5 @@
-public class TipoProvedorFrete {
-    
+public enum TipoProvedorFrete {
+    SEDEX,
+    JADLOG,
+    LOGGI;
 }
