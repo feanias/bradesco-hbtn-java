@@ -1,3 +1,4 @@
+import provedores.Frete;
 public class Pedido {
 
     int codigo;
