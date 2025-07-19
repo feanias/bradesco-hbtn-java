@@ -1,3 +1,5 @@
+package provedores;
+
 public class Loggi implements ProvedorFrete {
     
     @Override
