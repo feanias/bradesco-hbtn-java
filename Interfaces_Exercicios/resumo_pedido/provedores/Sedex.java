@@ -1,3 +1,5 @@
+package provedores;
+
 public class Sedex implements ProvedorFrete{
 
     @Override
