@@ -1,5 +1,3 @@
-package quadrado;
-
 public class Quadrado {
 	public static double area(double lado) throws IllegalArgumentException {
 		String mensagem = "Lado deve possuir valor positivo";
