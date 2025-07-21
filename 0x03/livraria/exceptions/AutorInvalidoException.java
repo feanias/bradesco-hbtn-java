@@ -1,4 +1,4 @@
-package livraria.exceptions;
+package exceptions;
 
 @SuppressWarnings("serial")
 public class AutorInvalidoException extends Exception{
