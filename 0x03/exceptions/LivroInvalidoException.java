@@ -1,4 +1,3 @@
-package exceptions.exceptions;
 
 @SuppressWarnings("serial")
 public class LivroInvalidoException extends Exception {
