@@ -1,5 +1,7 @@
 package livraria;
 import java.util.Locale;
+import livraria.Livro;
+import livraria.LivroEdicaoOuro;
 
 public class Program {
     public static void main(String[] args) {
