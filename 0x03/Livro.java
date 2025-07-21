@@ -23,7 +23,7 @@ public class Livro {
         if(titulo.length() >= 3){
             this.titulo = titulo;
         }else {
-            throw new LivroInvalidoException("Titulo de livro invalid");
+            throw new LivroInvalidoException("Titulo de livro invalido");
         }
     }
 
