@@ -12,13 +12,13 @@ public class ContaBancariaTarifada extends ContaBancariaBasica {
 
     @Override
     public void depositar(double valor) throws OperacaoInvalidaException {
-        super.depositar(valor);
-        sacar(valorTaxaDepositoSaque);
+        super.depositar(valor - valorTaxaDepositoSaque);
+        quantidadeTransacoes++;
     }
 
     @Override
     public void sacar(double valor) throws OperacaoInvalidaException {
-        super.sacar(valor + valorTaxaDepositoSaque);
+        super.sacar(valor + valorTaxaDepositoSaque); // Aplica a taxa de R$0,10 ao saque
         quantidadeTransacoes++;
     }
 

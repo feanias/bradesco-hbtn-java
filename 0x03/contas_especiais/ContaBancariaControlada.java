@@ -15,7 +15,7 @@ public class ContaBancariaControlada extends ContaBancariaBasica {
     public void aplicarAtualizacaoMensal() {
         double valorTarifa = super.calcularTarifaMensal();
         double jurosMensal = super.calcularJurosMensal();
-        if (getSaldo() < saldoMinimo) {
+        if (getSaldo() <= saldoMinimo) {
             valorTarifa += valorPenalidade; // Adiciona penalidade se o saldo estiver abaixo do mínimo
         }
         try {
