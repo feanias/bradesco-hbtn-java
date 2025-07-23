@@ -62,8 +62,9 @@ public class ContaBancariaBasica{
     }  
     
     public void aplicarAtualizacaoMensal(){
-        this.saldo += calcularJurosMensal();
-        this.saldo -= calcularTarifaMensal();
+        double valorTarifa = calcularTarifaMensal();
+        double jurosMensal = calcularJurosMensal();
+        this.saldo = saldo - valorTarifa + jurosMensal;
         
     }
 }
