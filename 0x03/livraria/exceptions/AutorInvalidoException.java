@@ -1,8 +1,0 @@
-package exceptions;
-
-@SuppressWarnings("serial")
-public class AutorInvalidoException extends Exception{
-    public AutorInvalidoException(String msg) {
-        super(msg);
-    }
-}
