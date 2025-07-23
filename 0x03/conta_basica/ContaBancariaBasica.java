@@ -26,7 +26,7 @@ public class ContaBancariaBasica{
 
     public void depositar(double valor) throws OperacaoInvalidaException {
         if (valor <= 0) {
-            throw new OperacaoInvalidaException("Valor para deposito deve ser maior que 0.");
+            throw new OperacaoInvalidaException("Valor para deposito deve ser maior que 0");
         }
         saldo += valor;
     }
