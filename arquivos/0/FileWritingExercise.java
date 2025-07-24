@@ -5,15 +5,16 @@ import java.util.Scanner;
 
 
  public class FileWritingExercise {
-     public static void main(String[] args) throws IOException {
+     public static void main(String[] args)  {
          Scanner scanner = new Scanner(System.in);
 
 
          // Solicita o nome do arquivo
          System.out.print("Digite o nome do arquivo (com extensão .txt): ");
          String fileName = scanner.nextLine();
-        
-         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName, true)); // 'true' para anexar ao arquivo existente
+        try {
+
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName, true)); // 'true' para anexar ao arquivo existente
             System.out.println("Digite o texto a ser escrito no arquivo (digite 'sair' para finalizar):");
             String entrada = scanner.nextLine();
             while (entrada != null) {
@@ -27,7 +28,15 @@ import java.util.Scanner;
             }
          bufferedWriter.close(); 
          scanner.close();
-
          System.out.println("Texto escrito no arquivo " + fileName + " com sucesso!");
+            
+        } catch (IOException e) {
+            System.out.println("Ocorreu um erro ao escrever no arquivo: " + e.getMessage());
+        } finally {
+            scanner.close();
+        }
+         
+
+         
      }
  }
