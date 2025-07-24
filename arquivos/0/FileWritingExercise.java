@@ -16,9 +16,14 @@ import java.util.Scanner;
          BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(fileName, true)); // 'true' para anexar ao arquivo existente
             System.out.println("Digite o texto a ser escrito no arquivo (digite 'sair' para finalizar):");
             String entrada = scanner.nextLine();
-            while (!entrada.contentEquals("sair")) {
-                bufferedWriter.write(entrada + System.lineSeparator()); // Escreve a entrada no arquivo
-                entrada = scanner.next(); // Escreve a entrada no arquivo
+            while (entrada != null) {
+                if (entrada.contains("sair")){
+                    break;
+                }else{
+                    bufferedWriter.write(entrada + System.lineSeparator()); // Escreve a entrada no arquivo
+                    entrada = scanner.next();
+                }
+                 // Escreve a entrada no arquivo
             }
          bufferedWriter.close(); 
          scanner.close();
