@@ -15,11 +15,14 @@ public class FileReadingExercise {
                 System.out.println(line);
                 line = br.readLine();
             }
+            System.out.println("");
+            
         } catch (IOException ex) {
             System.out.println("Erro ao ler o arquivo: " + ex.getMessage());
         } finally {
             // Aqui você pode fechar o BufferedReader se necessário
             System.out.println("Leitura do arquivo concluída.");
+            System.out.println(" ");
             br.close();
         }
 
