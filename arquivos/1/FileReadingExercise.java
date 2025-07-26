@@ -15,8 +15,6 @@ public class FileReadingExercise {
                 System.out.println(line);
                 line = br.readLine();
             }
-            System.out.println("");
-            
         } catch (IOException ex) {
             System.out.println("Erro ao ler o arquivo: " + ex.getMessage());
         } finally {
