@@ -5,7 +5,7 @@ import java.io.IOException;
 public class FileReadingExercise {
     public static void main(String[] args) throws IOException {
         String fileName = "exemplo.txt"; // Nome do arquivo fixo para leitura
-        fileName = "arquivos/1/" + fileName; // Caminho do arquivo
+        //fileName = "arquivos\\1\\" + fileName; // Caminho do arquivo
         BufferedReader br = new BufferedReader(new FileReader(fileName));
         try {
             System.out.println("Conteúdo do arquivo 'exemplo.txt':");
