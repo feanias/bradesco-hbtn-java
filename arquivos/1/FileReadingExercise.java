@@ -15,7 +15,7 @@ public class FileReadingExercise {
             String linha = br.readLine();
             while(Objects.nonNull(linha)) {
                 System.out.println(linha);
-                proximaLinha = br.readLine();
+                linha = br.readLine();
             }
             System.out.println("\nLeitura do arquivo concluída.");
 
