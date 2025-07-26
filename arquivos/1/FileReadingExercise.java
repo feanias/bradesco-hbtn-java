@@ -9,14 +9,12 @@ public class FileReadingExercise {
         BufferedReader br = new BufferedReader(new FileReader(fileName));
         try {
             System.out.println("Conteúdo do arquivo 'exemplo.txt':");
-            System.out.println("\n");
             String line = null;
             line = br.readLine();
             while (line != null) {
                 System.out.println(line);
                 line = br.readLine();
             }
-            System.out.println("\n");
         } catch (IOException ex) {
             System.out.println("Erro ao ler o arquivo: " + ex.getMessage());
         } finally {
