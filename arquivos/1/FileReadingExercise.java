@@ -8,7 +8,7 @@ public class FileReadingExercise {
         fileName = "arquivos/1/" + fileName; // Caminho do arquivo
         BufferedReader br = new BufferedReader(new FileReader(fileName));
         try {
-            
+            System.out.println("Conteúdo do arquivo 'exemplo.txt':");
             String line = null;
             line = br.readLine();
             while (line != null) {
