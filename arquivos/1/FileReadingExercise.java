@@ -3,27 +3,22 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class FileReadingExercise {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         String fileName = "exemplo.txt"; // Nome do arquivo fixo para leitura
-        fileName = "../1/" + fileName; // Caminho do arquivo
-        BufferedReader br = new BufferedReader(new FileReader(fileName));
-        try {
-            System.out.println("Conteúdo do arquivo 'exemplo.txt':");
-            System.out.println("\n");
-            String line = null;
-            line = br.readLine();
-            while (line != null) {
-                System.out.println(line);
-                line = br.readLine();
-            }
-            
-        } catch (IOException ex) {
-            System.out.println("Erro ao ler o arquivo: " + ex.getMessage());
-        } finally {
-            // Aqui você pode fechar o BufferedReader se necessário
-            System.out.println("Leitura do arquivo concluída.");
-            br.close();
-        }
 
+        System.out.println("Conteúdo do arquivo 'exemplo.txt':\n");
+        //
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(fileName));
+            String linha = br.readLine();
+            while(Objects.nonNull(linha)) {
+                System.out.println(linha);
+                proximaLinha = br.readLine();
+            }
+            System.out.println("\nLeitura do arquivo concluída.");
+
+        } catch (Exception  e) {
+            System.out.println("Erro ao processar arquivo.");
+        }
     }
 }
