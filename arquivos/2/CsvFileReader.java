@@ -6,7 +6,7 @@ import java.io.IOException;
 public class CsvFileReader {
 
     public static void main(String[] args) throws FileNotFoundException {
-        String fileName = "arquivos/2/funcionarios.csv";
+        String fileName = "../2/funcionarios.csv";
         try {
             BufferedReader reader = new BufferedReader(new java.io.FileReader(fileName));
             String line;
