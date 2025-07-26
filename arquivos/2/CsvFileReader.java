@@ -16,7 +16,7 @@ public class CsvFileReader {
                 String idade = value[1];
                 String cargo = value[2];
                 String salario = value[3];
-                System.out.println("Nome: " + nome);
+                System.out.println("Funcionário: " + nome);
                 System.out.println("Idade: " + idade);
                 System.out.println("Departamento: " + cargo);
                 System.out.println("Salarial: " + salario);
