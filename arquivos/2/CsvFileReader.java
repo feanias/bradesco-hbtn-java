@@ -1,11 +1,9 @@
-
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class CsvFileReader {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         String fileName = "../2/funcionarios.csv";
         try {
             BufferedReader reader = new BufferedReader(new java.io.FileReader(fileName));
@@ -23,14 +21,9 @@ public class CsvFileReader {
                 System.out.println("------------------------");
             }
             System.out.println("Leitura do arquivo concluída.");
-            System.out.println("\n");;
             reader.close();
 
-        } catch(FileNotFoundException e) {
-            System.out.println("Arquivo não encontrado: " + fileName);
-            e.printStackTrace();
-        }
-        catch(IOException e) {
+        }catch(IOException e) {
             System.out.println("Arquivo não encontrado: " + fileName);
             e.printStackTrace();
         }
