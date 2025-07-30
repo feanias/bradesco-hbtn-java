@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class GerenciadorEstoque {
     public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
-        Estoque estoque = new Estoque("arquivos/3/estoque.csv");
+        Estoque estoque = new Estoque("estoque.csv");
 
 
         while (true) {
