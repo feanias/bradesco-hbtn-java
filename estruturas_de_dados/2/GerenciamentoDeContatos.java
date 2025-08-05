@@ -1,3 +1,4 @@
+import java.net.Socket;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,25 +15,52 @@ public class GerenciamentoDeContatos {
 
     // Adiciona um novo contato
     public void adicionarContato(String nome, String telefone, String email) {
-    // IMPLEMENTE ESTE METODO
+        Contato contato = contatos.get(nome);
+        if(contato == null){
+            contato = new Contato();
+            if(contato.adicionarEmail(email)){
+                contato.adicionarTelefone(telefone);
+                contatos.put(nome, contato);
+                System.out.println("Contato " + nome + " adicionado com sucesso!");
+            } else{
+                System.out.println("Email duplicado para o contato "+ nome + ".");
+            }
+        }else{
+            System.out.println("Erro: Contato com nome " + nome +" já existe!");
+        }        
     }
 
 
     // Exibe todos os contatos
     public void exibirContatos() {
-    // IMPLEMENTE ESTE METODO
+        for (Map.Entry<String, Contato> entry : contatos.entrySet()){
+            System.out.println("Nome: " + entry.getKey());
+            entry.getValue().exibirContato();
+            System.out.println("-------------------------------");
+        }
     }
 
 
     // Busca um contato pelo nome
     public void buscarContato(String nome) {
-        // IMPLEMENTE ESTE METODO
+        Contato contato = contatos.get(nome);
+        if (contato != null) {
+            System.out.println("Contato encontrado: " + nome);
+            contato.exibirContato();
+        } else {
+            System.out.println("Contato " + nome + " não encontrado.");
+        }
     }
 
 
     // Remove um contato pelo nome
     public void removerContato(String nome) {
-        // IMPLEMENTE ESTE METODO
+        if (contatos.containsKey(nome)) {
+            contatos.remove(nome);
+            System.out.println("Contato " + nome + " removido com sucesso!");
+        } else {
+            System.out.println("Contato " + nome + " não encontrado.");
+        }
     }
 
 
