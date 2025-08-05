@@ -27,6 +27,10 @@ public class ArrayExercicio {
             numeros[i] = scanner.nextInt();
             //adiciona soma
             soma += numeros[i];
+
+            if (numeros[i] > maiorNumero) {
+                maiorNumero = numeros[i];
+            }
         }
         
         //imprimir o array
@@ -38,12 +42,6 @@ public class ArrayExercicio {
         //mostra a soma
         System.out.println("\nSoma de todos os números: "+ soma);
 
-        //encontrar o maior - primeiro ordena e dps pega a ultima posicao
-        Arrays.sort(numeros);
-        maiorNumero = numeros[9];
-
-
-        //imprimir maior
         System.out.println("Maior número no array: " + maiorNumero);
 
         // Fechando o scanner
