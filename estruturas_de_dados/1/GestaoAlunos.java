@@ -12,7 +12,7 @@ public class GestaoAlunos {
     public void excluirAluno(String nomeAluno){
         Aluno aluno = buscarAluno(nomeAluno);
         if(aluno != null){
-            listaAlunos.remove(aluno)
+            listaAlunos.remove(aluno);
         }
         
     }
