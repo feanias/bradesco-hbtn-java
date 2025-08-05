@@ -24,7 +24,7 @@ public class ArrayExercicio {
         //for para aceitar os numeros do teclado e adicionar a soma   
         for(int i = 0; i <= tamanhoArray-1; i++){
             System.out.print("Digite o número " + (i+1) + ": ");
-            numeros[i] = Integer.parseInt(scanner.next());
+            numeros[i] = scanner.nextInt();
             //adiciona soma
             soma += numeros[i];
         }
