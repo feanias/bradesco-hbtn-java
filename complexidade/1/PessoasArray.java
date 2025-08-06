@@ -23,13 +23,13 @@ public class PessoasArray {
         System.out.println("Procurando pelo nome: " + nome);
         for(int i = 0 ; i < nomes.length ; i++){
             System.out.println("Passando pelo indice:" + i);
-            if(nome == nomes[i]){
+            if(nome.equals(nomes[i])){
                 System.out.printf("Nome pesquisado é %s que está na posição %s \n",nome, i);
                 encontrado = true;
             }   
         }
         if(!encontrado){
-            throw new IllegalArgumentException("O nome " + nome + "não se encontra no array de nomes");
+            throw new IllegalArgumentException("O nome " + nome + " não se encontra no array de nomes");
         }
         
     }
