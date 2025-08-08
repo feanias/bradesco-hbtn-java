@@ -28,7 +28,7 @@ public class PessoasArray {
 
         while (inicio <= fim){
             int meio =  (inicio + fim) / 2 ;
-            System.out.println("Passando pelo indice "+ meio);
+            System.out.println("Passando pelo indice: "+ meio);
             int comparacao = nomes[meio].compareTo(nome);
 
             if(comparacao == 0){
