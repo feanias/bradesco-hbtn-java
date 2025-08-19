@@ -11,7 +11,7 @@ public class Armazem<T> implements Armazenavel<T>{
     }
 
     @Override
-    public T obterDoIntervalo(String nome) {
+    public T obterDoInventario(String nome) {
         return inventario.get(nome);
     }
 
