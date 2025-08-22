@@ -45,7 +45,7 @@ public class Program {
 
             try {
                 todo.adicionarTarefa(new Tarefa("Lavar roupas", 2));
-                
+                todo.listarTarefas();
             } catch (Exception ex) {
                 System.out.println(ex.getMessage());
             }
@@ -53,7 +53,7 @@ public class Program {
 
             try {
                 todo.adicionarTarefa(new Tarefa("", 4));
-                
+                todo.listarTarefas();
             } catch (Exception ex) {
                 System.out.println(ex.getMessage());
             }
