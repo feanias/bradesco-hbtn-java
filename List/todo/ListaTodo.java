@@ -82,10 +82,10 @@ public class ListaTodo {
         for(Tarefa t: tarefas){
             status = t.isEstahFeita();
             if(status){
-                mensagem = "[X] Id: "+ t.getIdentificador() + " Descricao: " + t.getDescricao() ;    
+                mensagem = "[X]  Id: "+ t.getIdentificador() + " - Descricao: " + t.getDescricao() ;    
                 System.out.println(mensagem);  
             }else{
-                mensagem = "[ ] Id: "+ t.getIdentificador() + " Descricao: " + t.getDescricao() ;
+                mensagem = "[ ]  Id: "+ t.getIdentificador() + " - Descricao: " + t.getDescricao() ;
                 System.out.println(mensagem);
             }
         }
