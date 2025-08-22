@@ -26,19 +26,20 @@ public class ListaTodo {
                 tarefas.add(tarefa);
             }else{
                 if(tarefaExiste(tarefa)){
-                    throw new Exception("Tarefa com identificador "+ tarefa.getIdentificador() + " ja existente na lista");
+                    throw new IllegalArgumentException("Tarefa com identificador "+ tarefa.getIdentificador() + " ja existente na lista");
                 }else{
                     if(tarefa.getDescricao() == "" || tarefa.getDescricao().isBlank()){
-                        throw new Exception("Descricao de tarefa invalida");
+                        throw new IllegalArgumentException("Descricao de tarefa invalida");
                     }else{
                         tarefas.add(tarefa);
                     }
 
                 }
             }
-        }catch(Exception e){
+        }catch(IllegalArgumentException e){
             System.out.println(e.getMessage());
         }
+        
         
         
     }
