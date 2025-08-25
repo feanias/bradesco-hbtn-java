@@ -32,7 +32,7 @@ public class Blog {
     }
 
     public Map<Categorias, Integer> obterContagemPorCategoria(){
-        Map<Categorias, Integer> mapContagem = new HashMap<>();
+        Map<Categorias, Integer> mapContagem = new TreeMap<>();
         for(Post p: listaPostagens){
             Categorias categoria = p.getCategoria();
             mapContagem.put(categoria, mapContagem.getOrDefault(categoria, 0) + 1);
