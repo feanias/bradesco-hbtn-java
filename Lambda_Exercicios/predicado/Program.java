@@ -1,6 +1,8 @@
-import java.util.*;
-import java.util.function.*;
-import java.util.Locale;
+import java.lang.reflect.Method;
+    import java.lang.reflect.Parameter;
+    import java.util.*;
+    import java.util.function.*;
+        import java.util.Locale;
 
     public class Program {
         public static void main(String[] args) {
@@ -33,11 +35,21 @@ import java.util.Locale;
                 p -> p.getTipo() == TiposProduto.COZINHA);   
 
             List<Produto> produtosBaixoEstoque = ConsultaProdutos.filtrar(produtos, 
-                p -> p.getQuantidadeEmEstoque() <= 10);        
+                p -> p.getQuantidadeEmEstoque() <= 10);      
+
+            try
+            {
+                Method method = ConsultaProdutos.class.getMethod("filtrar", List.class, Predicate.class);
+                if (method != null) {
+                    System.out.println("Metodo encontrado");
+                }
+            } catch(NoSuchMethodException ex) {
+                System.out.println("Metodo nao encontrado");
+            }
 
             System.out.println(produtosPrecoMaiorQue100);
             System.out.println(produtosPesoMenorOuIgual1600);
             System.out.println(produtosCozinha);
             System.out.println(produtosBaixoEstoque);
         }
-    }
+    }    
