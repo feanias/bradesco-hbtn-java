@@ -1,4 +1,5 @@
 import java.util.Collection;
+import java.util.List;
 
 public class Pessoa implements Comparable<Pessoa> {
 
@@ -8,7 +9,7 @@ private String cargo;
 private int idade;
 private double salario;
 
-public Pessoa(int codigo, String nome, String cargo, int idade, double salario) {
+public Pessoa(int codigo, String nome, String cargo, int idade, double salario, List<String> list) {
     this.codigo = codigo;
     this.nome = nome;
     this.cargo = cargo;

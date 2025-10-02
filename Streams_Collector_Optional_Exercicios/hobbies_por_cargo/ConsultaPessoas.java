@@ -1,5 +1,4 @@
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -56,12 +55,12 @@ public class ConsultaPessoas {
         ));
     }
 
-    public static TreeMap<String, Collection<Object>> obterHobbiesPorCargo(List<Pessoa> pessoas) {
+    public static Map<String, TreeSet<String>> obterHobbiesPorCargo(List<Pessoa> pessoas) {
         return pessoas.stream().collect(Collectors.groupingBy(
             Pessoa::getCargo,
-            () -> new TreeMap<>(),
+            () -> new HashMap<>(),
             Collectors.flatMapping(
-                pessoa -> pessoa.getHobbies().stream(),
+                p -> p.getHobbies().stream(),
                 Collectors.toCollection(TreeSet::new)
             )
         ));
