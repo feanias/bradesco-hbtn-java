@@ -1,4 +1,4 @@
-import java.util.Collection;
+import java.util.List;
 
 public class Pessoa implements Comparable<Pessoa> {
 
@@ -7,6 +7,7 @@ private String nome;
 private String cargo;
 private int idade;
 private double salario;
+private List<String> hobbies;
 
 public Pessoa(int codigo, String nome, String cargo, int idade, double salario) {
     this.codigo = codigo;
@@ -53,11 +54,9 @@ public String toString() {
         return this.nome.compareTo(outraPessoa.nome);
     }
 
-
-public Collection<Pessoa> getHobbies() {
-    // TODO Auto-generated method stub
-    throw new UnsupportedOperationException("Unimplemented method 'getHobbies'");
-}
+    public List<String> getHobbies() {
+        return hobbies;
+    }
 
 
 }
